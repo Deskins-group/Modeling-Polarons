@@ -50,6 +50,7 @@ Even if a method is applied that overcomes self-interaction errors, polaron form
 As we discussed, there are several challenges to modeling polarons. Simply using DFT+U or hybrid functionals does not guarantee polaron formation. A deliberate approach must be taken, or polaron formation may occur in a random or happenstance manner. A general strategy to modeling polarons can be summarized as: (1) Choose a method to overcome self-interaction errors (e.g. DFT+U or hybrid functionals). (2) Choose initial settings/input that help with convergence to a localized polaron. We discuss several approaches below that help with polaron convergence.
 
 *Bond Distortion Method*
+
 This is one of the simplest, easiest ways to enable charge localization. An analysis of this method and further discussion can be found in our paper[^pham]. This method has several advantages, as it is easy to implement and does not rely on any particular modeling code. It can be used with many different codes, e.g. VASP, CP2K, Siesta, etc. The basic premise of this method is to create initial geometries that look like polaron geometries, and this helps ensure convergence to localized solutions. Rather than using a symmetrical crystal as the initial structure, in this method the initial geometries have lengthened bonds around the polaron site. Since the structure ‘looks’ like a polaron, convergence to a localized solution more readily occurs. We found that this method is very efficient (more than the electron attractor method) and usually converges to polarons just fine. Scripts and sample input files to create initial geometries with distorted bonds can be found [here](https://github.com/Deskins-group/Other-Files/tree/master/Polaron-Strategies).
 
 [^pham]: Pham, T. D., & Deskins, N. A. (2020). Efficient Method for Modeling Polarons Using Electronic Structure Methods. Journal of Chemical Theory and Computation, 16(8), 5264–5278.
@@ -58,12 +59,14 @@ This is one of the simplest, easiest ways to enable charge localization. An anal
 In the bond distortion method the initial geometry has elongated bonds around the desired polaron site. This initial geometry ‘looks’ like a polaron so helps ensure convergence to a localized state.
 
 *Electron Attractor Method*
+
 This approach aims to attract electrons to a particular atomic site to enable polaron localization. More positive charge is placed somewhere in the lattice, and since electrons are attracted to positive charge the electrons may localize at that site. The extra positive charge can for instance be obtained by carefully choosing the pseudopotential, which represents the nucleus and core electrons. For instance, Ti has an atomic number of 22, meaning that the nucleus has 22 protons. V has an atomic number of 23 and has a slightly more positive nucleus than Ti. When modeling TiO2, the pseudopotential for one Ti atom can be replaced with a V pseudopotential. When the simulation is run, an excess electron should in principle be attracted to the V site because of its larger positive charge. Once a wavefunction and geometry with localized charge is obtained, then the original pseudopotential can be used (i.e. Ti instead of V). We found that this method can be tricky to use and is slower than the bond distortion method. Sometimes it works, while other times it does not. It also does not always converge to lowest energy states, so use it with care.
 
 
 With the electron attractor method a more positively charged nucleus (like V instead of Ti) is put in the cell so that electrons may be attracted to that atomic site.
 
 *Orbital Occupancy/Control*
+
 If one can choose which orbitals are occupied by electrons, then one can choose to put an extra electron at a particular site and orbital. Again, if the initial wavefunction ‘looks’ like the localized wavefunction, then convergence to the desired localized solution could occur. A method to control orbital occupancy has been implemented in VASP[^orb]. Other codes may also allow specification or control of the initial orbitals. Constrained DFT[^constrained] adds a constraining potential, and can also be used to control charge/spin.
 
 [^orb]: Allen, J. P., & Watson, G. W. (2014). Occupation matrix control of d- and f-electron localisations using DFT + U. Phys. Chem. Chem. Phys., 16(39), 21016–21031 ; https://www.chemistry.tcd.ie/staff/people/gww/gw_new/research/methodology/
