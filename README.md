@@ -73,6 +73,34 @@ If one can choose which orbitals are occupied by electrons, then one can choose 
 
 [^constrained]: Kaduk, B., Kowalczyk, T., & Van Voorhis, T. (2012). Constrained Density Functional Theory. Chemical Reviews, 112(1), 321–370. ; Ma, H., Wang, W., Kim, S., Cheng, M., Govoni, M., & Galli, G. (2020). PyCDFT: A Python package for constrained density functional theory. Journal of Computational Chemistry, 41(20), 1859–1867.
 
+**Calculating Other Properties**
 
+Beyond simply obtaining localized polaron solutions, there exist many properties of interest of such polarons. Below are discussed a few properties that can be calculated from electronic structure calculations.
+
+*Self-Trapping Energy*
+
+Determining the stability of a polaron is important, and can be calculated from DFT. Several examples in the literature[^stab] illustrate such calculations. The self-trapping energy is simple the difference in energy between the localized solution and delocalization solution. If the localized solution is energetically preferred, then polarons are stable in that material. If the delocalized solution is energetically preferred, then polarons are unstable in that material.
+
+[^stab]: Muñoz Ramo, D., Shluger, A. L., Gavartin, J. L., & Bersuker, G. (2007). Theoretical prediction of intrinsic self-trapping of electrons and holes in monoclinic HfO2. Physical Review Letters, 99(15), 1–4.; Janotti, A., Franchini, C., Varley, J. B., Kresse, G., & Van de Walle, C. G. (2013). Dual behavior of excess electrons in rutile TiO2. Physica Status Solidi – Rapid Research Letters, 7(3), 199–203.
+
+
+Self-trapping energies can be calculated by comparing the energies of delocalized and localized solutions.
+
+*Polaron Location*
+
+Related to polaron stability is determining the preferred location of a polaron. The preferred location has implications on polaron mobility and reactivity (such as in photocatalysis). Especially near surfaces or dopants, there may be several possible atomic sites where the polaron may locate. By modeling a polaron at different sites, the energy of a polaron at these sites can be mapped out. Several examples of this are available.[^loc]
+
+[^loc]: Deskins, N. A., Rousseau, R., & Dupuis, M. (2009). Localized electronic states from surface hydroxyls and polarons in TiO 2(110). Journal of Physical Chemistry C, 113(33). ; Deskins, N. A., Rousseau, R., & Dupuis, M. (2011). Distribution of Ti3+ surface sites in reduced TiO2. Journal of Physical Chemistry C, 115(15) ; Kowalski, P. M., Camellone, M. F., Nair, N. N., Meyer, B., & Marx, D. (2010). Charge Localization Dynamics Induced by Oxygen Vacancies on the TiO2 (110) Surface. Physical Review Letters, 105(14), 146405. ; Yim, C. M., Watkins, M. B., Wolf, M. J., Pang, C. L., Hermansson, K., & Thornton, G. (2016). Engineering Polarons at a Metal Oxide Surface. Physical Review Letters, 117(11), 116402.
+
+The relative stability of polarons at different Ti atoms at the surface of TiO2 rutile (110). The number/color scale corresponds to energies in eV. The * indicates the most stable location of the polaron (0 eV).
+
+*Polaron Mobility*
+
+Since polarons exist as localized states, they do not move as bands do. Rather they hop from one site to another in an activated process. By calculating energies for the initial, final, and transition state, the activation barrier can be determined. From all this, the rate of charge hopping can be calculated, including charge mobility and conductivity. Coupling between the initial and final states may also influence the hopping rate. Examples in the literature illustrate how to calculate polaron mobility.[^mob]
+
+[^mob]:  N. A., & Dupuis, M. (2007). Electron transport via polaron hopping in bulk TiO2: A density functional theory characterization. Physical Review B, 75(19), 195212. ; Rosso, K. M., Smith, D. M. A., & Dupuis, M. (2003). An ab initio model of electron transport in hematite (α-Fe2O3) basal planes. The Journal of Chemical Physics, 118(14), 6455–6466. ; Maxisch, T., Zhou, F., & Ceder, G. (2006). Ab initio study of the migration of small polarons in olivine Li x FePO 4 and their association with lithium ions and vacancies. Physical Review B, 73(10), 104301. ; Natanzon, Y., Azulay, A., & Amouyal, Y. (2020). Evaluation of Polaron Transport in Solids from First-principles. Israel Journal of Chemistry, 60(8–9), 768–786. ; Liu, T., Pasumarthi, V., Laporte, C., Feng, Z., Li, Q., Yang, J., Li, C., & Dupuis, M. (2018). Bimodal hole transport in bulk BiVO4 from computation. Journal of Materials Chemistry A: Materials for Energy and Sustainability, 6, 3714–3723.
+
+
+The activation energy for polaron hopping from one site to another can be calculated by determining the energy as the electron (or hole) moves from the initial site (reaction coordinate 0) to the final site (reaction coordinate 1).
 
 
