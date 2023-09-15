@@ -25,7 +25,9 @@ Density functional theory (DFT) is one of the most popular electronic structure 
 
 [^Franc]: Franchini, C., Reticcioli, M., Setvin, M., & Diebold, U. (2021). Polarons in materials. Nature Reviews Materials, 0123456789.
 [^sie]: Pacchioni, Gianfranco. “Modeling doped and defective oxides in catalysis with density functional theory methods: Room for improvements.” The Journal of chemical physics 128.18 (2008): 182505 
+
   Ganduglia-Pirovano, M. Veronica, Alexander Hofmann, and Joachim Sauer. “Oxygen vacancies in transition metal and rare earth oxides: Current state of understanding and remaining challenges.” Surface science reports 62.6 (2007): 219-270. 
+
   Huang, Patrick, and Emily A. Carter. “Advances in correlated electronic structure methods for solids, surfaces, and nanostructures.” Annu. Rev. Phys. Chem. 59 (2008): 261-290)
 
 See for example below two different DFT solutions for TiO2. One solution (with self-interaction errors) leads to an unpaired electron being delocalized throughout the simulation cell. The proper solution has the electron localized on a Ti atom, forming a polaron state. If one is to model polarons, then the ‘correct’ method must be chosen in order to avoid an incorrect description of polarons.
