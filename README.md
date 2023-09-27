@@ -2,6 +2,9 @@
 
 This section provides many details on modeling polarons using electronic structure theory, especially with density functional theory (DFT). I assume you know how to run DFT calculations, but want to know more about modeling polarons. We discuss the challenges in modeling polarons and how to overcome these challenges. You’ll find advice, ideas, and some references that may help get you started.
 
+![m-BiVO4_sample_polaron](https://github.com/Deskins-group/Modeling-Polarons/assets/16135778/7aa6cb0f-7343-4caf-8095-be52133a6f73)
+A polaron in BiVO<sub>4</sub> with electrons localizing in a d-orbital. Geometric distortions occur around the polaron site.
+
 **Background**
 
 There are two broad classes of charge carriers in semiconductors: polarons and bands. Polarons occur as electrons or holes in semiconductors distort the lattice and become localized within the lattice. This slows down the mobility of charge carriers relative to bands, and leads to a distortion around the polaron site. Both large and small polarons occur, depending on the extent of the distortion, and each has unique properties. Furthermore, polarons may be negatively charged (electrons) or positively charged (holes). Several reviews exist on the study of polarons.
