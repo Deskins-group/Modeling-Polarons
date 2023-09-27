@@ -2,7 +2,8 @@
 
 This section provides many details on modeling polarons using electronic structure theory, especially with density functional theory (DFT). I assume you know how to run DFT calculations, but want to know more about modeling polarons. We discuss the challenges in modeling polarons and how to overcome these challenges. You’ll find advice, ideas, and some references that may help get you started.
 
-![m-BiVO4_sample_polaron](https://github.com/Deskins-group/Modeling-Polarons/assets/16135778/7aa6cb0f-7343-4caf-8095-be52133a6f73)
+![m-BiVO4_sample_polaron](https://github.com/Deskins-group/Modeling-Polarons/assets/16135778/9cc56212-3de7-437d-8cd0-bfeb84fa41ce)
+
 A polaron in BiVO<sub>4</sub> with electrons localizing in a d-orbital. Geometric distortions occur around the polaron site.
 
 **Background**
